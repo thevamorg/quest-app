@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<!--<html xmlns="http://www.w3.org/1999/xhtml" class="fp-enabled" style="overflow: hidden; height: 100%;">-->
+<html xmlns="http://www.w3.org/1999/xhtml" class="fp-enabled" style="overflow: auto; height: 100%;"></html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>Safer, Better & Cost-Effective</title>
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/chart.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/fullpage.min.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
+	<script type="text/javascript" src="assets/js/jquery.js"></script>
+	<script type="text/javascript" src="assets/js/chart.js"></script>
+	<script src="assets/js/bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href=""></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+					<a id="navBtnMain" class="nav-link d-none d-lg-block active" href="#QuestBoard"
+						onclick="navBtnClick('navBtnMain')">
+						<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house-fill" fill="currentColor"
+							xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd"
+								d="M8 3.293l6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
+							<path fill-rule="evenodd"
+								d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z" />
+						</svg>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a id="navBtnOLTA" class="nav-link" href="#QuestBoard/1" onclick="navBtnClick('navBtnOLTA')">
+						<img class="coin-img" src="assets/imgs/coins.png" alt="coins" />OneLTA</a>
+				</li>
+				<li class="nav-item">
+					<a id="navBtnDTT" class="nav-link " href="#QuestBoard/2" onclick="navBtnClick('navBtnDTT')">
+						<img class="coin-img" src="assets/imgs/coins.png" alt="coins" />Dare-to-try</a>
+				</li>
+				<div class="to-right">
+					<li class="nav-item">
+						<a id="navBtnAbout" class="nav-link" href="#QuestBoard/3" onclick="btnAboutClick()">About</a>
+					</li>
+					<li class="nav-item">
+						<a id="navBtnGuide" class="nav-link" href="assets/downloads/faq.pdf" target="_blank"
+							onclick="playSound()">FAQs</a>
+					</li>
+					<li class="nav-item">
+						<a id="navBtnCalendar" class="nav-link" href="assets/downloads/coins-mechanism.pdf"
+							target="_blank" onclick="playSound()">How to Earn Coins</a>
+					</li>
+					<li class="nav-item">
+						<a id="navBtnGuide" class="nav-link" href="assets/downloads/quest-guide.pdf" target="_blank"
+							onclick="playSound()">Epic SBC
+							Quest Guide</a>
+					</li>
+				</div>
+			</ul>
+		</div>
+	</nav>
+	<div id="myContainer">
+		<div class="section" id="section1">
+			<div class="slide" id="slide1">
+				<div class="intro container">
+					<img id="title" src="assets/imgs/title.svg" alt="Quest Board" />
+					<p>
+						The greatest quest in life is to reach one's potential.<small>- Mychal Wynn</small>
+					</p>
+					<div id="OneLTA" class="button" onclick="navBtnClick('navBtnOLTA')">
+						<a class="nav-link" href="#QuestBoard/1">OneLTA</a>
+					</div>
+					<div id="DareToTry" class="button" onclick="navBtnClick('navBtnDTT')">
+						<a class="nav-link" href="#QuestBoard/2">Dare-to-try</a>
+					</div>
+				</div>
+			</div>
+			<div class="slide" id="slide2">
+				<div class="intro">
+					<div class="container">
+						<div class="row">
+							<div id="highest" class="col-12 col-sm-4">
+								<div id="OLTAHighlights" class="row">
+									<div class="col-4">
+										<img id="OLTAHighestParticipationTeamAvatar" alt="avatar" />
+									</div>
+									<div class="col-8">
+										<div class="tag">
+											<img src="assets/imgs/star.png" alt="star" />Highest
+											Participation
+										</div>
+										<p id="OLTAHighestParticipationTeamName"></p>
+										<img src="assets/imgs/coins.png" alt="coins" />
+										<span id="OLTAHighestParticipationTeamCoins"></span>
+										<small>coins</small>
+									</div>
+									<div class="col-4">
+										<img id="OLTAHighestCompletionTeamAvatar" alt="avatar" />
+									</div>
+									<div class="col-8">
+										<div id="tag2" class="tag">
+											<img src="assets/imgs/star.png" alt="star" />Highest
+											Project Completion
+										</div>
+										<p id="OLTAHighestCompletionTeamName"></p>
+										<span><span id="OLTAHighestCompletionTeamProgress"></span>%</span>
+										<small>completion</small>
+										<div class="progress">
+											<div id="OLTAHighestCompletionTeamProgressBar"
+												class="progress-bar bg-warning" role="progressbar"
+												style="height: 30px;"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-12 col-sm-8">
+								<table class="table-container table-dark">
+									<tbody>
+										<tr class="header">
+											<td>Ranking</td>
+											<td>Names</td>
+											<td>
+												<img src="assets/imgs/star.png" alt="star" />Quest Progress
+											</td>
+											<td>
+												<img src="assets/imgs/coins.png" alt="coins" />Coins
+											</td>
+										</tr>
+										<tr>
+											<td colspan="4">
+												<div class="scroll-container">
+													<table id="OLTALeaderboard"></table>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="slide" id="slide3">
+				<div class="intro">
+					<div class="container">
+						<div class="row">
+							<div id="highest" class="col-12 col-sm-4">
+								<div id="DTTHighlights" class="row">
+									<div class="col-4">
+										<img id="DTTHighestParticipationTeamAvatar" alt="avatar" />
+									</div>
+									<div class="col-8">
+										<div class="tag">
+											<img src="assets/imgs/star.png" alt="star" />Highest
+											Participation
+										</div>
+										<p id="DTTHighestParticipationTeamName"></p>
+										<img src="assets/imgs/coins.png" alt="coins" />
+										<span id="DTTHighestParticipationTeamCoins"></span>
+										<small>coins</small>
+									</div>
+									<div class="col-4">
+										<img id="DTTHighestCompletionTeamAvatar" alt="avatar" />
+									</div>
+									<div class="col-8">
+										<div id="tag2" class="tag">
+											<img src="assets/imgs/star.png" alt="star" />Highest
+											Project Completion
+										</div>
+										<p id="DTTHighestCompletionTeamName"></p>
+										<span><span id="DTTHighestCompletionTeamProgress"></span>%</span>
+										<small>completion</small>
+										<div class="progress">
+											<div id="DTTHighestCompletionTeamProgressBar"
+												class="progress-bar bg-warning" role="progressbar"
+												style="height: 30px;"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-12 col-sm-8">
+								<table class="table-container table-dark">
+									<tbody>
+										<tr class="header">
+											<td>Ranking</td>
+											<td>Names</td>
+											<td>
+												<img src="assets/imgs/star.png" alt="star" />Quest Progress
+											</td>
+											<td>
+												<img src="assets/imgs/coins.png" alt="coins" />Coins
+											</td>
+										</tr>
+										<tr>
+											<td colspan="4">
+												<div class="scroll-container">
+													<table id="DTTLeaderboard"></table>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="slide" id="slide4">
+				<div class="intro">
+					<div class="container">
+						<div class="row" style="max-width:600px;margin:auto;margin-bottom:20px;">
+							<div class="col" style="text-align:center;font-weight:bold;">
+								<p class="spin" style="font-size:40px;" data-init="80" data-max="140">
+								</p>
+								<p>Questers</p>
+							</div>
+							<div class="col" style="text-align:center;font-weight:bold;">
+								<p class="spin" style="font-size:40px;" data-init="0" data-max="16">
+								</p>
+								<p>SBC Quests</p>
+							</div>
+						</div>
+						<div style="max-width:800px;margin:auto;">
+							<p>We introduced a new chapter of the SBC projects on 4Q2020. Since then, 16 teams have been
+								quietly breaking new grounds to creatively tackle challenges that matter and contribute
+								to a more forward looking LTA. We call the team members ‘questers’, and SBC projects as
+								‘SBC Quests’ or simply ‘quest’.</p>
+							<p>This quest board tracks the progress of our brave and heroic questers – the 140
+								colleagues in our organisation who have valiantly stepped up to run in their respective
+								quests to create change.</p>
+							<p>As our questers soldier on, we hope that this quest board will bring a breath of fresh
+								air to the usual way of doing things, promote transparency, and generate healthy
+								gamesmanship – to push, pull and motivate each other in their respective quests.</p>
+							<p style="text-align:center;font-size:0.8rem;color:#737373"><em>Images designed by
+									Freepik.</em></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="Modal-01" tabindex="-1" aria-labelledby="" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">
+						<img id="ModalTeamAvatar" alt="avatar" />
+						<span id="ModalTeamName"></span>
+					</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p id="ModalTeamLiner"></p>
+					<div class="container">
+						<div class="row">
+							<div class="col-12 col-sm-5">
+								<canvas id="ModalTeamCoinsPiechart" style="margin-bottom:20px;"></canvas>
+								<p>
+									Earned a total of <span id="ModalTeamCoins">XX</span> coins
+								</p>
+							</div>
+							<div class="col-12 col-sm-7">
+								<p>
+									<span id="ModalTeamCoinsLearning">XX</span> coins from
+									E.P.P.O.T. Learning<br /><span
+										style="display:none;font-size:12px;color:#003399;">Testing this
+										lol.</span>
+								</p>
+								<p>
+									<span id="ModalTeamCoinsInspires">XX</span> coins from
+									E.P.P.O.T. Inspires
+								</p>
+								<p>
+									<span id="ModalTeamCoinsSharing">XX</span> coins from
+									E.P.P.O.T. Sharing
+								</p>
+								<p><span id="ModalTeamCoinsMisc">XX</span> coins from E.P.P.O.T. Guild</p>
+							</div>
+						</div>
+						<hr />
+						<p>
+							<span><span id="ModalTeamProgress">XX</span>%</span> Project
+							Completed
+						</p>
+						<div class="progress">
+							<div id="ModalTeamProgressBar" class="progress-bar bg-warning" role="progressbar"
+								style="height: 30px;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="assets/js/fullpage.scrollHorizontally.min.js"></script>
+	<script type="text/javascript" src="assets/js/fullpage.extensions.min.js"></script>
+	<script type="text/javascript">
+		jQuery(function ($) {
+			$("#myContainer").fullpage({
+				anchors: ["QuestBoard"],
+				menu: "#menu",
+				slidesNavigation: false,
+				scrollHorizontally: false
+			});
+
+			$(document).ready(function () {
+				playSound2();
+			});
+		});
+
+		var bleep = new Audio("assets/audio/coin.ogg");
+		var bleep2 = new Audio("assets/audio/1-up.ogg");
+		var bleep3 = new Audio("assets/audio/castle-clear.ogg");
+
+		function playSound() {
+			bleep.play();
+		}
+
+		function playSound1() {
+			bleep2.play();
+		}
+
+		function playSound2() {
+			bleep3.play();
+		}
+
+		function navBtnClick(tabName) {
+			playSound();
+			jQuery(".nav-link").removeClass("active");
+			jQuery("#" + tabName).addClass("active");
+		}
+
+		function btnAboutClick() {
+			playSound();
+			var spins = document.querySelectorAll('.spin');
+			var spinsArr = Array.from(spins);
+			spinsArr.forEach((spin) => {
+				rollUp(spin, spin.dataset.init, spin.dataset.max, 50)
+			});
+		}
+	</script>
+	<script type="text/javascript" src="boardData.js"></script>
+	<script type="text/javascript">
+		jQuery(function ($) {
+			function getTrophyImg(teamRank) {
+				var trophyClass = ["gold", "gold", "silver", "bronze"];
+
+				if (teamRank <= 3)
+					return (
+						'<img src="assets/imgs/' +
+						trophyClass[teamRank] +
+						'.png" alt="trophy" />'
+					);
+				else return "";
+			}
+
+			// DTT
+
+			// DTT Leaderboard
+			boardData.DTT.teams.sort(function (a, b) {
+				return b.progress - a.progress;
+			});
+			var currentRank = 0;
+			var previousTeamProgress = 0;
+			boardData.DTT.teams.forEach(function (team) {
+				if (team.progress === previousTeamProgress) {
+					team.rank = currentRank;
+				} else {
+					team.rank = ++currentRank;
+				}
+				previousTeamProgress = team.progress;
+
+				team.coins = team.coinsLearning + team.coinsInspires + team.coinsSharing + team.coinsMisc;
+
+				$("#DTTLeaderboard").append(
+					'<tr><td class="gold"><span>' +
+					getTrophyImg(team.rank) +
+					"</span></td><td>" +
+					'<a data-toggle="modal" data-target="#Modal-01" onclick=DTTLeaderboardClick("' +
+					team.label +
+					'")>' +
+					'<img src="' +
+					team.avatar +
+					'" alt="avatar" />' +
+					team.name +
+					"</a></td>" +
+					"<td>" +
+					team.progress +
+					"%" + "</td>" +
+					"<td>" +
+					team.coins +
+					"</td></tr>"
+				);
+			});
+
+			// DTT Highest Participation
+			var DTTHighestParticipationTeam = boardData.DTT.teams.find(function (
+				team
+			) {
+				return team.label === boardData.DTT.highestParticipationTeamLabel;
+			});
+			$("#DTTHighestParticipationTeamAvatar").attr(
+				"src",
+				DTTHighestParticipationTeam.avatar
+			);
+			$("#DTTHighestParticipationTeamName").text(
+				DTTHighestParticipationTeam.name
+			);
+			$("#DTTHighestParticipationTeamCoins").text(
+				DTTHighestParticipationTeam.coins
+			);
+
+			// DTT Highest Project Completion
+			var DTTHighestCompletionTeam = boardData.DTT.teams.find(function (team) {
+				return team.label === boardData.DTT.highestCompletionTeamLabel;
+			});
+			$("#DTTHighestCompletionTeamAvatar").attr(
+				"src",
+				DTTHighestCompletionTeam.avatar
+			);
+			$("#DTTHighestCompletionTeamName").text(DTTHighestCompletionTeam.name);
+			$("#DTTHighestCompletionTeamProgress").text(
+				DTTHighestCompletionTeam.progress
+			);
+			$("#DTTHighestCompletionTeamProgressBar").width(
+				DTTHighestCompletionTeam.progress + "%"
+			);
+
+			// OLTA
+
+			// OLTA Leaderboard
+			boardData.OLTA.teams.sort(function (a, b) {
+				return b.progress - a.progress;
+			});
+			var currentRank = 0;
+			var previousTeamProgress = 0;
+			boardData.OLTA.teams.forEach(function (team) {
+				if (team.progress === previousTeamProgress) {
+					team.rank = currentRank;
+				} else {
+					team.rank = ++currentRank;
+				}
+				previousTeamProgress = team.progress;
+
+				team.coins = team.coinsLearning + team.coinsInspires + team.coinsSharing + team.coinsMisc;
+
+				$("#OLTALeaderboard").append(
+					'<tr><td class="gold"><span>' +
+					getTrophyImg(team.rank) +
+					"</span></td><td>" +
+					'<a data-toggle="modal" data-target="#Modal-01" onclick=OLTALeaderboardClick("' +
+					team.label +
+					'")>' +
+					'<img src="' +
+					team.avatar +
+					'" alt="avatar" />' +
+					team.name +
+					"</a></td>" +
+					"<td>" +
+					team.progress +
+					"%" + "</td>" +
+					"<td>" +
+					team.coins +
+					"</td></tr>"
+				);
+			});
+
+			// OLTA Highest Participation
+			var OLTAHighestParticipationTeam = boardData.OLTA.teams.find(function (
+				team
+			) {
+				return team.label === boardData.OLTA.highestParticipationTeamLabel;
+			});
+			$("#OLTAHighestParticipationTeamAvatar").attr(
+				"src",
+				OLTAHighestParticipationTeam.avatar
+			);
+			$("#OLTAHighestParticipationTeamName").text(
+				OLTAHighestParticipationTeam.name
+			);
+			$("#OLTAHighestParticipationTeamCoins").text(
+				OLTAHighestParticipationTeam.coins
+			);
+
+			// OLTA Highest Project Completion
+			var OLTAHighestCompletionTeam = boardData.OLTA.teams.find(function (team) {
+				return team.label === boardData.OLTA.highestCompletionTeamLabel;
+			});
+			$("#OLTAHighestCompletionTeamAvatar").attr(
+				"src",
+				OLTAHighestCompletionTeam.avatar
+			);
+			$("#OLTAHighestCompletionTeamName").text(OLTAHighestCompletionTeam.name);
+			$("#OLTAHighestCompletionTeamProgress").text(
+				OLTAHighestCompletionTeam.progress
+			);
+			$("#OLTAHighestCompletionTeamProgressBar").width(
+				OLTAHighestCompletionTeam.progress + "%"
+			);
+		});
+
+
+
+		function OLTALeaderboardClick(teamLabel) {
+			var selectedTeam = boardData.OLTA.teams.find(function (team) {
+				return team.label === teamLabel;
+			});
+			LeaderboardClick(selectedTeam);
+		}
+
+		function DTTLeaderboardClick(teamLabel) {
+			var selectedTeam = boardData.DTT.teams.find(function (team) {
+				return team.label === teamLabel;
+			});
+			LeaderboardClick(selectedTeam);
+		}
+
+		function LeaderboardClick(selectedTeam) {
+			playSound1();
+			jQuery("#ModalTeamAvatar").attr("src", selectedTeam.avatar);
+			jQuery("#ModalTeamName").text(selectedTeam.name);
+			jQuery("#ModalTeamCoins").text(selectedTeam.coins);
+			jQuery("#ModalTeamCoinsLearning").text(selectedTeam.coinsLearning);
+			jQuery("#ModalTeamCoinsInspires").text(selectedTeam.coinsInspires);
+			jQuery("#ModalTeamCoinsSharing").text(selectedTeam.coinsSharing);
+			jQuery("#ModalTeamCoinsMisc").text(selectedTeam.coinsMisc);
+			jQuery("#ModalTeamProgress").text(selectedTeam.progress);
+			jQuery("#ModalTeamLiner").text(selectedTeam.liner);
+			if (jQuery("#ModalTeamCoinsPiechart").data('chart') !== undefined) jQuery("#ModalTeamCoinsPiechart").data('chart').destroy();
+			var modalTeamCoinsPiechart = new Chart(
+				jQuery("#ModalTeamCoinsPiechart"),
+				{
+					type: "pie",
+					data: {
+						labels: [
+							"Coins from E.P.P.O.T. Learning",
+							"Coins from E.P.P.O.T. Inspires",
+							"Coins from E.P.P.O.T. Sharing",
+							"Coins from E.P.P.O.T. Guild"
+						],
+						datasets: [
+							{
+								data: [
+									selectedTeam.coinsLearning,
+									selectedTeam.coinsInspires,
+									selectedTeam.coinsSharing,
+									selectedTeam.coinsMisc
+								],
+								backgroundColor: ["#2A9D8F", "#E76F51", "#264653", "#FFCE00"]
+							}
+						]
+					},
+					options: {
+						legend: {
+							display: false
+						}
+					}
+				}
+			);
+			jQuery("#ModalTeamCoinsPiechart").data('chart', modalTeamCoinsPiechart);
+			jQuery("#ModalTeamProgressBar").width(selectedTeam.progress + "%");
+		}
+
+		function rollUp(object, number, max, delay) {
+			number = parseInt(number, 10) + 1;
+			if (number > max) { return }
+			else {
+				object.innerHTML = number;
+				setTimeout(() => { rollUp(object, number, max, delay) }, delay);
+			}
+		}
+	</script>
+</body>
+
+</html>
