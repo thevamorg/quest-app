@@ -183,7 +183,6 @@ p {
     border-top: 1px solid #ccc;
     max-height: 400px;
     overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
 }
 .table-container {
     background-color: #2a3c55;
@@ -333,9 +332,9 @@ a:focus,
     position: absolute;
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-    .scroll-container {
+    /* .scroll-container {
         max-height: 600px !important;
-    }
+    } */
     #highest .col-4 img {
         width: 50px;
     }
@@ -444,9 +443,9 @@ a:focus,
     #slide3 .container {
         margin-top: 3em;
     }
-    .scroll-container {
+    /* .scroll-container {
         max-height: 200px;
-    }
+    } */
 }
     @media only screen and (min-width: 768px) and (max-width: 1100px) and (orientation: portrait) {
     #slide1 {
@@ -478,9 +477,9 @@ a:focus,
     #dragon {
         max-width: 350px;
     }
-    .scroll-container {
+    /* .scroll-container {
         max-height: 330px;
-    }
+    } */
 }
 @media only screen and (min-width: 992px) {
     .navbar-nav .active {
