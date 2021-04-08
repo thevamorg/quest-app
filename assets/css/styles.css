@@ -181,9 +181,8 @@ p {
 }
 .scroll-container {
     border-top: 1px solid #ccc;
-    
+    position: fixed;
     overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
 }
 .table-container {
     background-color: #2a3c55;
