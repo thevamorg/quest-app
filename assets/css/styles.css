@@ -184,7 +184,6 @@ p {
     max-height: 400px;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
-    position: fixed;
 }
 .table-container {
     background-color: #2a3c55;
